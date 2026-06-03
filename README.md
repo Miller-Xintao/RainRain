@@ -20,13 +20,24 @@
 
 **一句话**：方向（涨/跌）接近抛硬币、不可预测；真正强相关的是**波动幅度**——大波动会成串出现。择时极难，管理风险可行。
 
+## 加仓时机（第七章）
+
+| 问题 | 数据结论 |
+|---|---|
+| 跌得越多，未来回报越高吗？ | 几乎不是，深熊里买的尾部反而最惨 |
+| 现在买 vs 等暴跌再买 | **平均看立即投资胜**（跨子区间/现金利率均稳健）；等 20%+ 暴跌持币空仓最差，常年等不到 |
+| 一次性 vs 定投（DCA） | 一次性约 **2/3 起点收益更高**；定投把累积期回撤**砍掉约 1/4–1/3**，是「拿一点收益换平滑体验」 |
+
 详见 **[REPORT.md](REPORT.md)**，图表见 `figures/`。
 
 ## 复现
 
 ```bash
 pip install numpy pandas matplotlib
-python3 analyze.py
+python3 analyze.py           # 下跌概率 / 分布 / 涨跌关联 / 回撤 / 季节性
+python3 dip_buying.py        # 现在加仓 vs 等回调
+python3 verify.py            # 结论稳健性验证(跨区间 + 现金计息)
+python3 dca_vs_lumpsum.py    # 一次性 vs 定投(DCA)
 ```
 
 输出：控制台统计 + `results.json` + `figures/*.png`。
